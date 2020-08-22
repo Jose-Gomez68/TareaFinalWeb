@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--aqui ponemos las direcciones local de las dependencias de boostrap/css-->
+    <!-- build:css dist/about.css -->
+    <link rel="stylesheet" href="node_modules/boostrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <!-- endbuild -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!--AQUI DEFINIMOS LA BARRA DE NAVEGACION APARECE EN LA 
+    PARTE SUPERIOR DE LA PAGINA CON EL NOMBRE DE LA PAGINA HOTELES
+  ESTO SE CREA CON LA ETIQUETA <NAV> Y LAS CLASES NAVBAR PARA QUE SE CREE
+     NAVBAR-DARK QUE LA BARRA NO SE COLOQUE SOBRE EL CONTENIDO DEL DIV
+    O TOME COLORES QUE NO QUERAMOS Y bg-dark LE DICIMOS QUE LA 
+  BARRA SERA COLOR NEGRO -->
+  <!--si agregamos la clase navbar-expand-md o sm, quitara el menu de
+  las tres rallitas y pondra el contenido que definimos abajo a lo largo de
+la barra navbar-->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">hoteles</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+<!--LAS CLASS que llevan collapse es para que se oculte 
+en la forma responsive-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <!--CONTENIDO DEL MENU DE LAS RALLITAS JAJAJA-->
+            <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="./about.html">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="./precios.html">Precios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Terminos y condiciones</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="jumbotron">
+    <h1 align="center">HOTELES</h1>
+  </div>
+    
+    <div class="container">
+
+      <nav aria-label="breadcrumb">
+
+        <ol class="breadcrumb">
+
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+
+        </ol>
+
+    </nav>
+
+      <span>
+        Lorem Ipsum is simply dummy text of the printing 
+        and typesetting industry. Lorem Ipsum has been the industry's 
+        standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to 
+        make a type specimen book. It has survived not only five centuries, but also the leap 
+        into electronic typesetting, remaining essentially unchanged. It was popularised in 
+        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+        and more recently with desktop publishing software like Aldus PageMaker including versions 
+        of Lorem Ipsum.
+      </span>
+
+
+    </div> <!--CONTENEDOR 1-->
+
+    
+    <footer>
+      <div class="row", style="background-color: #5dade2;">
+
+        <div class="col-sm-4 d-flex flex-column ">
+          <a href="http://www.facebook.com">Facebook</a>
+          <a href="http://www.twitter.com">Twitter</a>
+          <a href="http://www.instagram.com">Instagram</a>
+        </div>
+
+        <div class="col-sm-4" , align="center">
+          <address>
+           <h3>Oficina central</h3>
+            <p>Tucuman 834, CABA. ARGENTINA</p>
+            <p>+52 93211111</p>
+            <p>contacto@guiahoteles.com</p>
+          </address>
+        </div>
+
+        <div class="col-sm-4 d-flex flex-column align-items-end">
+          <a href="http://www.facebook.com">Nosotros</a>
+          <a href="http://www.twitter.com">Precios</a>
+          <a href="http://www.instagram.com">Terminos y
+          condiciones</a>
+        </div>
+
+      </div>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--aqui ponemos las direcciones local de las dependencias de boostrap/js, popper y jquery-->
+    <!-- build:js dist/about.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper-utils.min.js"></script>
+    <script src="node_modules/boostrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
+    
+
+  </body>
+</html>

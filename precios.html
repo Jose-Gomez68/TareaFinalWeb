@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--aqui ponemos las direcciones local de las dependencias de boostrap/css-->
+    <!-- build:css dist/precios.css -->
+    <link rel="stylesheet" href="node_modules/boostrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <!--RECUERDEN INCLUIRLAS REFERENCIAS DE LOS ICONOS EN CADA ARCHIVO -->
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/bootstrap-icons.svg">
+    <!-- endbuild -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!--AQUI DEFINIMOS LA BARRA DE NAVEGACION APARECE EN LA 
+    PARTE SUPERIOR DE LA PAGINA CON EL NOMBRE DE LA PAGINA HOTELES
+  ESTO SE CREA CON LA ETIQUETA <NAV> Y LAS CLASES NAVBAR PARA QUE SE CREE
+     NAVBAR-DARK QUE LA BARRA NO SE COLOQUE SOBRE EL CONTENIDO DEL DIV
+    O TOME COLORES QUE NO QUERAMOS Y bg-dark LE DICIMOS QUE LA 
+  BARRA SERA COLOR NEGRO -->
+  <!--si agregamos la clase navbar-expand-md o sm, quitara el menu de
+  las tres rallitas y pondra el contenido que definimos abajo a lo largo de
+la barra navbar-->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">hoteles</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+<!--LAS CLASS que llevan collapse es para que se oculte 
+en la forma responsive-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <!--CONTENIDO DEL MENU DE LAS RALLITAS JAJAJA-->
+            <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">Precios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Terminos y condiciones</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="jumbotron">
+    <h1 align="center">HOTELES</h1>
+  </div>
+    
+    <div class="container">
+
+      <nav aria-label="breadcrumb">
+
+        <ol class="breadcrumb">
+
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Precios</li>
+
+        </ol>
+
+    </nav>
+
+  <!--EN ul class="nav nav-tabs" ES PARA DEFINIR LAS PESTAÑITAS DE TABS Y CON EL ATTRIBUTO
+  role="tablist" CREAMOS CON LA ETIQUETA li LAS LISTAS DE LAS PESTAÑAS TAB.
+Y SI CAMBIAMOS EL nav-tabs por nav-pills cambia el estilo de las pestañas pero tambien se cambia 
+el data-toggle="pill" de las etiquetas <a> para que surta efecto-->  
+    <ul class="nav nav-pills" id="myTab" role="tablist">
+      <!--EN li class="nav-item" es para mostrar el contenido en las pestañas tab-->      
+      <li class="nav-item">
+        <!--EN LA ETIQUETA <a class="nav-link active" DEFINIMOS EL NOMBRE QUE TENDRA NUESTRA PESTAÑA TAB Y CON href
+        LE PONEMOS CON # EL ID DE LA DIV DONDE TENEMOS EL CONTENIDO A MOSTRAR Y CON el active en la clase puesto y EL
+      aria-selected="true"  LE DECIMOS QUE EN AUTOMATICO CUANDO SE ABRA ESE HTML POR DEFECTO SE ABRE SOLO ESTA TAB-->
+        <a class="nav-link active" id="compara-tab" data-toggle="pill" href="#compara" role="tab"
+        aria-controls="compara" aria-selected="true">Compara</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" id="tarjetas-tab" data-toggle="pill" href="#tarjetass" role="tab" aria-controls="tarjetas" 
+        aria-selected="false">Tarjetas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="comentarios-tab" data-toggle="pill" href="#comentarios" role="tab"
+        aria-controls="comentarios" aria-selected="false">Comentarios</a>
+      </li>
+    </ul>
+
+<!--EL div class="tab-content" es el div que va contener TODO lo que queremos mostrar
+en la tab que creamos arriba y se le da un id como se ve.
+esta clase diferencia el contenido que mostraremos para no se encimen entre ellos -->    
+    <div class="tab-content" id="myTabContent">
+
+<!--LA DIV class="tab-pane fade show active" contiene lo que queremos mostrar en cada pestaña del tab
+por eso lleva esa clase se le da un id para llamarla en href de las tab de arriba 
+aqui cuando le damos en la tab comparar nos muestra la tabla de precios y el active es para que se muestre solo la primra tab-->      
+      <div class="tab-pane fade show active" id="compara" role="tabpanel"
+        aria-labelledby="tarjetas-tab">
+
+        <!--AQUI USAMOS LA CLASE TABLE-RESPONSIVE PARA QUE SE 
+        ADAPTE A LAS DIMENSIONES DE LOS TELEFONOS-->   
+        <div class="table-responsive">
+        <!--SI VAMOS A USAR UNA TABLA USAMOS ETIQUETA TABLA CON CLASE TABLE
+        Y TAMBINE HAY DISEÑOS QUE ESTAN EN BOOSTRAB DE LAS TABLAS
+        COMO EL TABLE-STRIPED-->   
+          <table class="table table-striped">
+
+        <!--COLUMNAS DE LAS TABLAS-->
+            <thead class="thead-dark" align="center">
+              <th>Calidad</th>
+              <th>Pinamar</th>
+              <th>Mar del Plata</th>
+              <th>San Clemente</th>
+              <th>Santa Teresita</th>
+            </thead>
+
+        <!--AQUI EMPIEZA LAS FILAS Y CONTENIDO DE LAS TABLAS-->       
+            <tbody align="center">
+              <tr>
+                <td ><span class="oi oi-star"></span></td>
+                <td>$100</td>
+                <td>$120</td>
+                <td>$150</td>
+                <td>$180</td>
+              </tr>
+
+              <tr>
+                <td><span class="oi oi-star"></span>
+                <span class="oi oi-star"></span></td>
+                <td>$210</td>
+                <td>$220</td>
+                <td>$250</td>
+                <td>$280</td>
+              </tr>
+
+              <tr>
+                <td><span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span></td>
+                <td>$300</td>
+                <td>$320</td>
+                <td>$350</td>
+                <td>$380</td>
+              </tr>
+
+              <tr>
+                <td><span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span></td>
+                <td>$410</td>
+                <td>$420</td>
+                <td>$450</td>
+                <td>$480</td>
+              </tr>
+
+              <tr>
+                <td><span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span>
+                  <span class="oi oi-star"></span></td>
+                <td>$500</td>
+                <td>$520</td>
+                <td>$550</td>
+                <td>$580</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+
+<!--EN EL div class="tab-pane fade" ES LO MISMO QUE EL DE LA TABLA NAMAS QUE AQUI NO LLEVA EL
+active  POR QUE COMO NO ES LA PRIMERA TAB NO LA MUESTRA CUANDO SE CARGA LA PAGINA ASI QUE SIN EL ACTIVE,
+SOLO SE MOSTRARA ESTE CONTENIDO CUANDO LE DEMOS A LA TAB TARJETAS-->      
+      <div class="tab-pane fade" id="tarjetass" role="tabpanel"
+        aria-labelledby="tarjetas-tab">
+
+          <!--<div class="card" style="width: 18rem;" align="center">-->
+            <div class="card-header" style="background-color: #338cc6;
+              color: white;" align="center">
+              TARJETAS ACEPTADAS
+            </div>
+            <!--USE LA ACCORDION
+            RECORDAR ES IMPORTANTE QUE SE TIENEN QUE VINCULAR EL ID CON EL DATA-TARGET Y ID CON DATA-PARENT DEBEN SER EL 
+            MISMO NOMBRE EN LOS BOTONES CON LA INFORMACION PARA QUE FUNCIONE Y MUESTE LA INFO-->
+            <div class="accordion" id="accordionExample275">
+              <div class="card z-depth-0 bordered">
+                <div class="card-header" id="Trjeta1">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#tarjetabasica"
+                      aria-expanded="true" aria-controls="collapseOne2">
+                      Tarjeta Basica
+                    </button>
+                  </h5>
+                </div>
+                <div id="tarjetabasica" class="collapse" aria-labelledby="tarjeta1"
+                  data-parent="#accordionExample275">
+                  <div class="card-body">
+                    Puedes reservar en 3 pagos sin intereses
+                  </div>
+                </div>
+              </div>
+              <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingTwo2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                      Tarjeta VIP
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2"
+                  data-parent="#accordionExample275">
+                  <div class="card-body">
+                    Puedes reservar en 6 meses sin intereses.
+                    Al llegar, recibiras una canasta de obsequis para
+                    disfrutar con tu familia.
+                  </div>
+                </div>
+              </div>
+              <div class="card z-depth-0 bordered">
+                <div class="card-header" id="headingThree2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                      Tarjeta Black
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
+                  data-parent="#accordionExample275">
+                  <div class="card-body">
+                    Puedes reservar en 12 meses sin intereses. Al llegar recibiras
+                    una canasta de obsequis para disfrutar con tu familia y un 
+                    acceso al gimnacio y spa todos los dias de tus vacaciones</div>
+                </div>
+              </div>
+            </div>
+
+          <!--</div> --ACORDION CONTENIDO EN UNA CARD. ESTE EL CIERRE DEL CARD-->
+
+      </div>
+
+      <!--ESTO ES LA ULTIMA TAB COMENTARIO ES LO MISMO QUE LA TAB TARJETAS-->
+      <div class="tab-pane fade" id="comentarios" role="tabpanel"
+      aria-labelledby="comentarios-tab">Comentarios</div>
+
+    </div><!--cierra el contenedor que debe mostrar las tab-->
+
+    
+
+    </div> <!--CONTENEDOR 1-->
+
+    <br>
+    <footer>
+      <div class="row", style="background-color: #5dade2;">
+
+        <div class="col-sm-4 d-flex flex-column ">
+          <a href="http://www.facebook.com">Facebook</a>
+          <a href="http://www.twitter.com">Twitter</a>
+          <a href="http://www.instagram.com">Instagram</a>
+        </div>
+
+        <div class="col-sm-4" , align="center">
+          <address>
+           <h3>Oficina central</h3>
+            <p>Tucuman 834, CABA. ARGENTINA</p>
+            <p>+52 93211111</p>
+            <p>contacto@guiahoteles.com</p>
+          </address>
+        </div>
+
+        <div class="col-sm-4 d-flex flex-column align-items-end">
+          <a href="http://www.facebook.com">Nosotros</a>
+          <a href="http://www.twitter.com">Precios</a>
+          <a href="http://www.instagram.com">Terminos y
+          condiciones</a>
+        </div>
+
+      </div>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--aqui ponemos las direcciones local de las dependencias de boostrap/js, popper y jquery-->
+    <!-- build:js dist/precios.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper-utils.min.js"></script>
+    <script src="node_modules/boostrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
+    
+
+  </body>
+</html>

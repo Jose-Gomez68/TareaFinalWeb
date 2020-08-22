@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--aqui ponemos las direcciones local de las dependencias de boostrap/css-->
+    <!-- build:css dist/contacto.css -->
+    <link rel="stylesheet" href="node_modules/boostrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <!-- endbuild -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!--AQUI DEFINIMOS LA BARRA DE NAVEGACION APARECE EN LA 
+    PARTE SUPERIOR DE LA PAGINA CON EL NOMBRE DE LA PAGINA HOTELES
+  ESTO SE CREA CON LA ETIQUETA <NAV> Y LAS CLASES NAVBAR PARA QUE SE CREE
+     NAVBAR-DARK QUE LA BARRA NO SE COLOQUE SOBRE EL CONTENIDO DEL DIV
+    O TOME COLORES QUE NO QUERAMOS Y bg-dark LE DICIMOS QUE LA 
+  BARRA SERA COLOR NEGRO -->
+  <!--si agregamos la clase navbar-expand-md o sm, quitara el menu de
+  las tres rallitas y pondra el contenido que definimos abajo a lo largo de
+la barra navbar-->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">hoteles</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+<!--LAS CLASS que llevan collapse es para que se oculte 
+en la forma responsive-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <!--CONTENIDO DEL MENU DE LAS RALLITAS JAJAJA-->
+            <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link " href="#">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Precios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Terminos y condiciones</a></li>
+              <li class="nav-item"><a class="nav-link active" href="./contacto.html">contacto</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="jumbotron">
+    <h1 align="center">HOTELES</h1>
+  </div>
+    
+    <div class="container">
+
+      <nav aria-label="breadcrumb">
+
+        <ol class="breadcrumb">
+
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">contacto</li>
+
+        </ol>
+
+    </nav>
+
+      <h1>Dejame tu comentario</h1>
+
+<!--APARTIR DE LA ETIQUETA <FORM> ELABORAMOS LOS FORMULARIOS CON LAS CLASES ESPECIALES DE
+  BOOSTRAP4 LA CLASSES SON FORM- ROW: DE FILA, FORM-GROUP COL-SM-6: VA SER EL FORMULARIO ESTARA
+AGRUPADO EL LABEL CON EL CAJA DE TEXTO Y USANDO LA MITAD DEL ESPACIO DE LAS CLUMANS OSEA 6 DE 12-->
+      <form>
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <label for="nombre">NOMBRE</label> 
+              <input type="text" class="form-control" id="nombre"
+              placeholder="Ingrese El Nombre">
+            </div>
+            
+            <div class="form-group col-sm-6">
+              <label for="ap">APELLIDO</label> 
+              <input type="text" class="form-control" id="ap"
+              placeholder="Ingrese El Apellido">
+            </div>
+          </div> 
+
+            <div class="form-group">
+              <label for="email">EMAIL</label> 
+              <input type="email" class="form-control" id="email"
+              placeholder="Ingrese El Email">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-sm-9">
+                <label for="domicilio">DOMICILIO</label> 
+                <input type="text" class="form-control" id="domicilio"
+                placeholder="Ingrese El Domicilio">
+              </div>
+              
+              <div class="form-group col-sm-3">
+                <label for="provincia">PROVINCIA</label> 
+                  <select id="provincia" class="form-control">
+                    <option selected>Capital Federal</option>
+                    <option>Buenos Aires</option>
+                    <option>Cordova</option>
+                    <option>Santa Fe</option>
+                    <option>Mendoza</option>
+                  </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="comentario">COMENTARIO</label>
+              <textarea id="comentario" class="form-control" rows="10"></textarea>
+            </div>
+<!--AQUI DECLARAMOS UN DIV PARA CONTENR UN CHEKBOX-->
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-inpunt" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">Quiero que me Contacten</label>
+              </div> 
+            </div>
+            <button type="summit" class="btn btn-primary">Enviar</button>
+
+      </form>
+
+    </div> <!--CONTENEDOR 1-->
+
+    <br>
+    <footer>
+      <div class="row", style="background-color: #5dade2;">
+
+        <div class="col-sm-4 d-flex flex-column ">
+          <a href="http://www.facebook.com">Facebook</a>
+          <a href="http://www.twitter.com">Twitter</a>
+          <a href="http://www.instagram.com">Instagram</a>
+        </div>
+
+        <div class="col-sm-4" , align="center">
+          <address>
+           <h3>Oficina central</h3>
+            <p>Tucuman 834, CABA. ARGENTINA</p>
+            <p>+52 93211111</p>
+            <p>contacto@guiahoteles.com</p>
+          </address>
+        </div>
+
+        <div class="col-sm-4 d-flex flex-column align-items-end">
+          <a href="http://www.facebook.com">Nosotros</a>
+          <a href="http://www.twitter.com">Precios</a>
+          <a href="http://www.instagram.com">Terminos y
+          condiciones</a>
+        </div>
+
+      </div>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--aqui ponemos las direcciones local de las dependencias de boostrap/js, popper y jquery-->
+    <!-- build:js dist/contacto.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper-utils.min.js"></script>
+    <script src="node_modules/boostrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
+    
+
+  </body>
+</html>
